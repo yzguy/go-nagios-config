@@ -1,11 +1,11 @@
 package nagios
 
 type TimePeriod struct {
-	Name       string
-	Alias      string
-	Periods    map[string]string
-	Exceptions map[string]string
-	Exclude    string // Maybe map[string]string
+	Name       string            `json:"timeperiod_name"`
+	Alias      string            `json:"alias"`
+	Periods    map[string]string `json:"periods"`
+	Exceptions map[string]string `json:"exceptions"`
+	Exclude    string            `json:"exclude"` // Maybe map[string]string
 }
 
 func NewTimePeriod() (*TimePeriod, error) {

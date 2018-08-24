@@ -1,10 +1,10 @@
 package nagios
 
 type ContactGroup struct {
-	Name                string
-	Alias               string
-	Members             string // Maybe []Contact
-	ContactGroupMembers string // Maybe []ContactGroup
+	Name                string `json:"contactgroup_name"`
+	Alias               string `json:"alias"`
+	Members             string `json:"members"`              // Maybe []Contact
+	ContactGroupMembers string `json:"contactgroup_members"` // Maybe []ContactGroup
 }
 
 func NewContactGroup() (*ContactGroup, error) {

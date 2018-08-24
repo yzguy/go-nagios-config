@@ -1,13 +1,13 @@
 package nagios
 
 type ServiceExtInfo struct {
-	HostName           string // Maybe Host.Name
-	ServiceDescription string
-	Notes              string
-	NotesURL           string // Maybe URL
-	ActionURL          string // Maybe URL
-	IconImage          string
-	IconImageAlt       string
+	HostName           string `json:"host_name"` // Maybe Host.Name
+	ServiceDescription string `json:"service_description"`
+	Notes              string `json:"notes"`
+	NotesURL           string `json:"notes_url"`  // Maybe URL
+	ActionURL          string `json:"action_url"` // Maybe URL
+	IconImage          string `json:"icon_image"`
+	IconImageAlt       string `json:"icon_image_alt"`
 }
 
 func NewServiceExtInfo() (*ServiceExtInfo, error) {

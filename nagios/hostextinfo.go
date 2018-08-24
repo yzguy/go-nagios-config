@@ -1,16 +1,16 @@
 package nagios
 
 type HostExtInfo struct {
-	HostName       string // Maybe Host.Name
-	Notes          string
-	NotesURL       string // Maybe URL
-	ActionURL      string // Maybe URL
-	IconImage      string
-	IconImageAlt   string
-	VRMLImage      string
-	StatusMapImage string
-	Coords2D       string // maybe coords type?
-	Coords3D       string // maybe coords type?
+	HostName       string `json:"host_name"` // Maybe Host.Name
+	Notes          string `json:"notes"`
+	NotesURL       string `json:"notes_url"`  // Maybe URL
+	ActionURL      string `json:"action_url"` // Maybe URL
+	IconImage      string `json:"icon_image"`
+	IconImageAlt   string `json:"icon_image_alt"`
+	VRMLImage      string `json:"vrml_image"`
+	StatusMapImage string `json:"statusmap_image"`
+	Coords2D       string `json:"2d_coords"` // maybe coords type?
+	Coords3D       string `json:"3d_coords"` // maybe coords type?
 }
 
 func NewHostExtInfo() (*HostExtInfo, error) {

@@ -1,23 +1,23 @@
 package nagios
 
 type Contact struct {
-	Name                        string
-	Alias                       string
-	ContactGroups               string // Maybe []ContactGroup
-	HostNotificationsEnabled    int    // Maybe bool
-	ServiceNotificationsEnabled int    // Maybe bool
-	HostNotificationPeriod      string // Maybe TimePeriod.Name
-	ServiceNotificationPeriod   string // Maybe TimePeriod.Name
-	HostNotificationOptions     string // Maybe []string
-	ServiceNotificationOptions  string // Maybe []string
-	HostNotificationCommands    string // Maybe Command.Name
-	ServiceNotificationCommands string // Maybe Command.Name
-	Email                       string
-	Pager                       string
-	AddressX                    string
-	CanSubmitCommands           int // Maybe bool
-	RetainStatusInformation     int // Maybe bool
-	RetainNonStatusInformation  int // Maybe bool
+	Name                        string `json:"contact_name"`
+	Alias                       string `json:"alias"`
+	ContactGroups               string `json:"contactgroups"`                 // Maybe []ContactGroup
+	HostNotificationsEnabled    int    `json:"host_notifications_enabled"`    // Maybe bool
+	ServiceNotificationsEnabled int    `json:"service_notifications_enabled"` // Maybe bool
+	HostNotificationPeriod      string `json:"host_notification_period"`      // Maybe TimePeriod.Name
+	ServiceNotificationPeriod   string `json:"service_notification_period"`   // Maybe TimePeriod.Name
+	HostNotificationOptions     string `json:"host_notification_options"`     // Maybe []string
+	ServiceNotificationOptions  string `json:"service_notification_options"`  // Maybe []string
+	HostNotificationCommands    string `json:"host_notification_commands"`    // Maybe Command.Name
+	ServiceNotificationCommands string `json:"service_notification_commands"` // Maybe Command.Name
+	Email                       string `json:"email"`
+	Pager                       string `json:"pager"`
+	AddressX                    string `json:"addressx"`
+	CanSubmitCommands           int    `json:"can_submit_commands"`           // Maybe bool
+	RetainStatusInformation     int    `json:"retain_status_information"`     // Maybe bool
+	RetainNonStatusInformation  int    `json:"retain_non_status_information"` // Maybe bool
 }
 
 func NewContact() (*Contact, error) {
