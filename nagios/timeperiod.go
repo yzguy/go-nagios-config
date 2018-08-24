@@ -5,7 +5,7 @@ type TimePeriod struct {
 	Alias      string            `json:"alias"`
 	Periods    map[string]string `json:"periods"`
 	Exceptions map[string]string `json:"exceptions"`
-	Exclude    string            `json:"exclude"` // Maybe map[string]string
+	Exclude    []string          `json:"exclude"`
 }
 
 func NewTimePeriod() (*TimePeriod, error) {

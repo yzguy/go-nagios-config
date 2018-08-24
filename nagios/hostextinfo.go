@@ -1,7 +1,7 @@
 package nagios
 
 type HostExtInfo struct {
-	HostName       string `json:"host_name"` // Maybe Host.Name
+	HostName       Host   `json:"host_name"`
 	Notes          string `json:"notes"`
 	NotesURL       string `json:"notes_url"`  // Maybe URL
 	ActionURL      string `json:"action_url"` // Maybe URL

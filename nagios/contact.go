@@ -1,23 +1,23 @@
 package nagios
 
 type Contact struct {
-	Name                        string `json:"contact_name"`
-	Alias                       string `json:"alias"`
-	ContactGroups               string `json:"contactgroups"`                 // Maybe []ContactGroup
-	HostNotificationsEnabled    int    `json:"host_notifications_enabled"`    // Maybe bool
-	ServiceNotificationsEnabled int    `json:"service_notifications_enabled"` // Maybe bool
-	HostNotificationPeriod      string `json:"host_notification_period"`      // Maybe TimePeriod.Name
-	ServiceNotificationPeriod   string `json:"service_notification_period"`   // Maybe TimePeriod.Name
-	HostNotificationOptions     string `json:"host_notification_options"`     // Maybe []string
-	ServiceNotificationOptions  string `json:"service_notification_options"`  // Maybe []string
-	HostNotificationCommands    string `json:"host_notification_commands"`    // Maybe Command.Name
-	ServiceNotificationCommands string `json:"service_notification_commands"` // Maybe Command.Name
-	Email                       string `json:"email"`
-	Pager                       string `json:"pager"`
-	AddressX                    string `json:"addressx"`
-	CanSubmitCommands           int    `json:"can_submit_commands"`           // Maybe bool
-	RetainStatusInformation     int    `json:"retain_status_information"`     // Maybe bool
-	RetainNonStatusInformation  int    `json:"retain_non_status_information"` // Maybe bool
+	Name                        string         `json:"contact_name"`
+	Alias                       string         `json:"alias"`
+	ContactGroups               []ContactGroup `json:"contactgroups"`
+	HostNotificationsEnabled    bool           `json:"host_notifications_enabled"`
+	ServiceNotificationsEnabled bool           `json:"service_notifications_enabled"`
+	HostNotificationPeriod      TimePeriod     `json:"host_notification_period"`
+	ServiceNotificationPeriod   TimePeriod     `json:"service_notification_period"`
+	HostNotificationOptions     string         `json:"host_notification_options"`    // Maybe []string
+	ServiceNotificationOptions  string         `json:"service_notification_options"` // Maybe []string
+	HostNotificationCommands    []Command      `json:"host_notification_commands"`
+	ServiceNotificationCommands []Command      `json:"service_notification_commands"`
+	Email                       string         `json:"email"`
+	Pager                       string         `json:"pager"`
+	AddressX                    string         `json:"addressx"`
+	CanSubmitCommands           bool           `json:"can_submit_commands"`
+	RetainStatusInformation     bool           `json:"retain_status_information"`
+	RetainNonStatusInformation  bool           `json:"retain_non_status_information"`
 }
 
 func NewContact() (*Contact, error) {

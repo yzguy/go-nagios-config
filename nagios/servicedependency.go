@@ -1,18 +1,18 @@
 package nagios
 
 type ServiceDependency struct {
-	DependentHostName           string `json:"dependent_host_name"`         // Maybe []Host
-	DependentHostGroupName      string `json:"dependent_hostgroup_name"`    // Maybe []HostGroup
-	ServiceGroupName            string `json:"servicegroup_name"`           // Maybe []ServiceGroup
-	DependentServiceGroupName   string `json:"dependent_servicegroup_name"` // Maybe []ServiceGroups
-	DependentServiceDescription string `json:"dependent_service_description"`
-	HostName                    string `json:"host_name"`      // Maybe []Host
-	HostGroupName               string `json:"hostgroup_name"` // Maybe []HostGroup
-	ServiceDescription          string `json:"service_description"`
-	InheritsParent              int    `json:"inherits_parent"`              // Maybe bool
-	ExecutionFailureCritera     string `json:"execution_failure_critera"`    // Maybe []string
-	NotificationFailureCritera  string `json:"notification_failure_critera"` // Maybe []string
-	DependencyPeriod            string `json:"dependency_period"`            // Maybe TimePeriod
+	DependentHostName           []Host         `json:"dependent_host_name"`
+	DependentHostGroupName      []HostGroup    `json:"dependent_hostgroup_name"`
+	ServiceGroupName            []ServiceGroup `json:"servicegroup_name"`
+	DependentServiceGroupName   []ServiceGroup `json:"dependent_servicegroup_name"`
+	DependentServiceDescription string         `json:"dependent_service_description"`
+	HostName                    []Host         `json:"host_name"`
+	HostGroupName               []HostGroup    `json:"hostgroup_name"`
+	ServiceDescription          string         `json:"service_description"`
+	InheritsParent              bool           `json:"inherits_parent"`
+	ExecutionFailureCriteria    string         `json:"execution_failure_criteria"`   // Maybe []string
+	NotificationFailureCritera  string         `json:"notification_failure_critera"` // Maybe []string
+	DependencyPeriod            TimePeriod     `json:"dependency_period"`
 }
 
 func NewServiceDependency() (*ServiceDependency, error) {
