@@ -9,3 +9,7 @@ type HostGroup struct {
 	NotesURL         string // maybe URL
 	ActionURL        string // maybe URL
 }
+
+func NewHostGroup() (*HostGroup, error) {
+	return &HostGroup{}, nil
+}

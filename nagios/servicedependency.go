@@ -14,3 +14,7 @@ type ServiceDependency struct {
 	NotificationFailureCritera  string // Maybe []string
 	DependencyPeriod            string // Maybe TimePeriod
 }
+
+func NewServiceDependency() (*ServiceDependency, error) {
+	return &ServiceDependency{}, nil
+}

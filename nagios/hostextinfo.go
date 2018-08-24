@@ -12,3 +12,7 @@ type HostExtInfo struct {
 	Coords2D       string // maybe coords type?
 	Coords3D       string // maybe coords type?
 }
+
+func NewHostExtInfo() (*HostExtInfo, error) {
+	return &HostExtInfo{}, nil
+}

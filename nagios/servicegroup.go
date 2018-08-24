@@ -9,3 +9,7 @@ type ServiceGroup struct {
 	NotesURL            string // maybe URL
 	ActionURL           string // maybe URL
 }
+
+func NewServiceGroup() (*ServiceGroup, error) {
+	return &ServiceGroup{}, nil
+}

@@ -9,3 +9,7 @@ type ServiceExtInfo struct {
 	IconImage          string
 	IconImageAlt       string
 }
+
+func NewServiceExtInfo() (*ServiceExtInfo, error) {
+	return &ServiceExtInfo{}, nil
+}

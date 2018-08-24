@@ -11,3 +11,7 @@ type HostEscalation struct {
 	EscalationPeriod     string // Maybe TimePeriod.Name
 	EscalationOptions    string // maybe []string
 }
+
+func NewHostEscalation() (*HostEscalation, error) {
+	return &HostEscalation{}, nil
+}

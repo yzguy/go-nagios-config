@@ -10,3 +10,7 @@ type HostDependency struct {
 	NotificationFailureCritera string // Maybe []string
 	DependencyPeriod           string // Maybe TimePeriod.Name
 }
+
+func NewHostDependency() (*HostDependency, error) {
+	return &HostDependency{}, nil
+}

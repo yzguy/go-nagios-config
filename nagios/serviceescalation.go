@@ -12,3 +12,7 @@ type ServiceEscalation struct {
 	EscalationPeriod     string // Maybe TimePeriod.Name
 	EscalationOptions    string // Maybe []string
 }
+
+func NewServiceEscalation() (*ServiceEscalation, error) {
+	return &ServiceEscalation{}, nil
+}

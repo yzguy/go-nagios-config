@@ -41,3 +41,7 @@ type Service struct {
 	IconImage                  string
 	IconImageAlt               string
 }
+
+func NewService() (*Service, error) {
+	return &Service{}, nil
+}

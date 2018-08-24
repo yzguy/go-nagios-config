@@ -7,3 +7,7 @@ type TimePeriod struct {
 	Exceptions map[string]string
 	Exclude    string // Maybe map[string]string
 }
+
+func NewTimePeriod() (*TimePeriod, error) {
+	return &TimePeriod{}, nil
+}

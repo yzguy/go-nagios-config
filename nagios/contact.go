@@ -19,3 +19,7 @@ type Contact struct {
 	RetainStatusInformation     int // Maybe bool
 	RetainNonStatusInformation  int // Maybe bool
 }
+
+func NewContact() (*Contact, error) {
+	return &Contact{}, nil
+}

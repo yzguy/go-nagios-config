@@ -6,3 +6,7 @@ type ContactGroup struct {
 	Members             string // Maybe []Contact
 	ContactGroupMembers string // Maybe []ContactGroup
 }
+
+func NewContactGroup() (*ContactGroup, error) {
+	return &ContactGroup{}, nil
+}
