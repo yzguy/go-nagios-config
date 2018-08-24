@@ -13,7 +13,7 @@ func TestNewCommand(t *testing.T) {
 	}{
 		{
 			"check_uptime",
-			"check_uptime -H node1.test.local",
+			"check_uptime -H $HOSTADDRESS$",
 		},
 		{
 			"check_empty",
