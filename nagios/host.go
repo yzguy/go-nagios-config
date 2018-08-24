@@ -6,7 +6,7 @@ type Host struct {
 	DisplayName                string
 	Address                    string
 	Parents                    string // Maybe []Host.Name
-	HostGroups                 string // Maybe []HostGroups
+	HostGroups                 string // Maybe []HostGroup
 	CheckCommand               string // Maybe Command.Name
 	InitialState               string // Maybe []string
 	MaxCheckAttempts           int
@@ -27,8 +27,8 @@ type Host struct {
 	ProcessPerfData            int    // Maybe bool
 	RetainStatusInformation    int    // Maybe bool
 	RetainNonStatusInformation int    // Maybe bool
-	Contacts                   string // Maybe []Contacts
-	ContactGroups              string // Maybe []ContactGroups
+	Contacts                   string // Maybe []Contact
+	ContactGroups              string // Maybe []ContactGroup
 	NotificationInterval       int
 	FirstNotificationDelay     int
 	NotificationPeriod         string // Maybe TimePeriod.Name
